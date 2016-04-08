@@ -8,6 +8,9 @@
 
 .well{
 	border-radius: 50px 5px 50px 5px;
+	text-align: center;
+	border: solid 2px orange;
+	box-shadow: 10px 10px 30px black;
 
 }
 
@@ -16,6 +19,10 @@
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
+}
+
+#subtext{
+	margin-top:20px;
 }
 
 p, h4, h1{
@@ -27,3 +34,4 @@ color: red;
 font-weight: bold;
 
 }
+

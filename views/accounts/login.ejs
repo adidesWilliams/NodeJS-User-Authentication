@@ -1,11 +1,22 @@
 <% layout('layout') -%>
 
 <div class="vertical-center">
+
 	<div class="container">
+
 		<div class="row">
+		<div  id="title">
+			<h1>Company Name</h1>
+		</div>
+
 			<div class="col-md-4 col-md-offset-4 well">
+			<% if (message.length > 0) { %>
+				<p><%= message %></p>
+			<% } %>
+
+
 				<form method="POST">
-					<h1>Welcome Back!</h1>
+					<h4>Welcome Back!</h4>
 						<!-- <div class="form-group">
 							<label="name">Name: </label>
 							<input type="text" class="form-control" name="name">
@@ -21,8 +32,11 @@
 							<input type="password" class="form-control" name="password" placeholder="Password">		
 						</div>
 
-						<button type="submit" class="btn btn-success">Create your account</button>
+						<button type="submit" class="btn btn-success">Login</button>
 				</form>
+				<div id="subtext">
+					<a href='/register'><p>...or register for an account</p></a>
+				</div>	
 			</div>
 		</div>	
 	</div>

@@ -16,7 +16,7 @@ var flash = require('express-flash');
 
 var MongoStore = require('connect-mongo')(session);
 var passport = require('passport');
-
+var LocalStrategy = require('passport-local');
 //imports for Schema/models
 var User = require('./models/user');
 

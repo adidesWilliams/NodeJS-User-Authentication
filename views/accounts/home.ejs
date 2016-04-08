@@ -1,0 +1,22 @@
+<% layout('layout') -%>
+
+
+<div class="vertical-center">
+	<div class="container">
+		<div class="row">
+			<div  id="title">
+				<h1>HOME PAGE</h1>
+			</div>
+				<div class="col-md-4 col-md-offset-4 well">
+
+				<div>
+					<p>Hi <%= user.name%></p>
+				</div>
+
+						<a href='/profile'><button class="btn btn-primary">PROFILE</button></a>
+						<a href='/logout'><button class="btn btn-danger">LOGOUT</button></a>
+				</div>
+			</div>
+		</div>	
+	</div>
+
