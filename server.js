@@ -4,6 +4,7 @@ var PORT = process.env.PORT || 3000;
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
+var keys = require('./config/keys');
 
 //imports for render engine
 var ejs = require('ejs');
@@ -35,8 +36,8 @@ app.use(cookieParser());
 app.use(session({
 	resave: true,
 	saveUninitialized: true,
-	secret: 'fs34rgfsda',
-	//store: new MongoStore({ url: 'mongodb://root:$4Nu3b6%ms@ds061415.mlab.com:61415/userauthadidesdb', autoReconnect: true })
+	secret: keys.secret,
+	
 }));
 
 app.use(flash());
@@ -57,7 +58,7 @@ app.use(userRoutes);
 
 
 //Connect to mongoDB
-mongoose.connect('mongodb://root:$4Nu3b6%ms@ds061415.mlab.com:61415/userauthadidesdb', function(err){
+mongoose.connect(keys.database, function(err){
 	if(err){
 		console.log(err);
 	} else {
